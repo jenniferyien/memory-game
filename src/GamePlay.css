@@ -1,0 +1,54 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+.box {
+  border: 1px solid #000;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.card {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+.card.hidden-card {
+  background-image: url('./images/bg.jpg');
+}
+.card.display-0 {
+  background-image: url('./images/0.jpg');
+}
+.card.display-1 {
+  background-image: url('./images/1.jpg');
+}
+.card.display-2 {
+  background-image: url('./images/2.jpg');
+}
+.card.display-3 {
+  background-image: url('./images/3.jpg');
+}
+.card.display-4 {
+  background-image: url('./images/4.jpg');
+}
+.card.display-5 {
+  background-image: url('./images/5.jpg');
+}
+.card.display-6 {
+  background-image: url('./images/6.jpg');
+}
+.card.display-7 {
+  background-image: url('./images/7.jpg');
+}
+.card.display-8 {
+  background-image: url('./images/8.jpg');
+}
+.card.display-9 {
+  background-image: url('./images/9.jpg');
+}
