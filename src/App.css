@@ -1,28 +1,57 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Raleway|Rammetto+One');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 21px;
+}
+
+.return {
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+  top: 25px;
+  color: #fff;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.return i {
+  font-size: 50px;
+}
+
+.main-page {
   text-align: center;
+  background-color: #ecc7c0;
+  height: 100vh;
+  min-height: 600px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.main-header {
+  min-height: 100px;
   color: white;
+  padding: 50px;
+  background-color: #616161;
 }
 
-.App-title {
-  font-size: 1.5em;
+.main-header.play {
+  padding: 20px;
 }
 
-.App-intro {
-  font-size: large;
+.main-header h2 {
+  font-family: 'Rammetto One', cursive;
+  font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.buttons .btn {
+  padding: 10px 30px;
+  font-size: 21px;
+  border-radius: 0;
+  margin: 15px auto;
+  background-color: #616161;
+  color: #fff;
+}
+
+.buttons .btn:hover {
+  color: #fbaea5;
 }

@@ -1,0 +1,15 @@
+.select-options {
+  margin-top: 15px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.option p {
+  margin-left: 5px;
+  margin-bottom: 0;
+}

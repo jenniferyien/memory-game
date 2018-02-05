@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import OptionSelection from './OptionSelection';
 import GamePlay from './GamePlay';
-
-const items = [
-  '3x4',
-  '5x2',
-  '4x4',
-  '4x5'
-];
 
 export default class App extends Component {
   constructor(props) {
@@ -23,7 +15,6 @@ export default class App extends Component {
   }
 
   pickOption(e) {
-    console.log(e.currentTarget.value)
     this.setState({
       option: e.currentTarget.value
     });
@@ -67,12 +58,21 @@ export default class App extends Component {
   
   render(){
     const { option, gameStart, gridSize, playCards } = this.state
-    console.log(this.state)
     return (
        <div className="main-page">
-           <div>
+           {
+             gameStart && 
+              <div className='return' onClick={this.restartGame}>
+                <i className="fa fa-arrow-circle-o-left" />
+                <p>Back</p>
+              </div>
+           }
+           <div className={`main-header ${gameStart? 'play': ''}`}>
              <h2>Memory Game</h2>
-             <p>Please pick an option below to start the game.</p>
+             {
+               !gameStart && 
+                <p>Please pick an option below to start the game.</p>
+             }
            </div>
           {
             !gameStart && 
@@ -82,16 +82,12 @@ export default class App extends Component {
             gameStart &&
             <GamePlay grid={gridSize} play={playCards} />
           }
-          <div id='buttons'>
-            {
-              !gameStart &&
-              <button id ='newGame' onClick={this.startGame}> Start Game </button>
-            }
-            {
-              gameStart && 
-              <button id='Reset' onClick={this.restartGame}>Reset Game</button>
-            }
-          </div>
+          {
+            !gameStart &&
+              <div className='buttons'>
+                <button className='btn' onClick={this.startGame}> Start Game </button>
+              </div>
+          }
        </div>
     );
   }

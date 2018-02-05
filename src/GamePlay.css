@@ -1,12 +1,17 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 
 .box {
-  border: 1px solid #000;
+  background-color: #fbaea5;
+  border: 1px solid #616161;
   min-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px 0;
+}
+
+.col-xs-2 {
+  width: 18%;
 }
 
 .card {
@@ -17,6 +22,13 @@
   align-items: center;
   background-position: center;
   background-size: cover;
+  font-size: 150px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card.complete {
+  background-image: url('./images/complete.jpg') !important;
 }
 
 .card.hidden-card {

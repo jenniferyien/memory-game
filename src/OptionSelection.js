@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './OptionSelection.css'
 
 const items = [
   '3x4',
@@ -12,12 +13,12 @@ class OptionSelection extends Component {
   render() {
     let resultRows = items.map(function(result){
         return (
-          <div key={result}>
+          <div key={result} className='option'>
             <input type="radio" name="size_option" 
                  value={result}
                  checked={this.props.value === result}
                  onChange={this.props.onChangeOptions}/>
-             {result}
+             <p>{result}</p>
            </div>
         );
     }, this);
